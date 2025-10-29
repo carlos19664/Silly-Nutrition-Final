@@ -9,7 +9,8 @@ import { ExitIntentPopup } from "@/components/exit-intent-popup"
 import { useState } from "react"
 import Link from "next/link"
 import { BadgeChip } from "@/components/badge-chip"
-import { TestimonialRotator } from "@/components/testimonial-rotator"
+import Testimonials from "@/components/testimonials";
+
 
 export default function LandingPage() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
@@ -232,36 +233,42 @@ export default function LandingPage() {
             </div>
 
             {/* Stats Grid with Testimonials */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto px-4">
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-md border border-gray-100">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">
-                  Beta Launch
-                </div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-3">
-                  Join our exclusive beta program
-                </div>
-                <TestimonialRotator testimonials={betaTestimonials} />
-              </div>
+<section className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 max-w-4xl mx-auto">
+  {/* Card 1 — Beta Launch */}
+  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-md">
+    <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent mb-3">
+      Beta Launch
+    </div>
+    <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-3">
+      Join our exclusive beta program
+    </div>
+    {/* Use the list you already have in this file */}
+    <Testimonials testimonials={betaTestimonials} />
+  </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-md border border-gray-100">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">
-                  AI-Powered
-                </div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-3">Personalised to your goals</div>
-                <TestimonialRotator testimonials={aiTestimonials} />
-              </div>
+  {/* Card 2 — AI-Powered */}
+  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-md">
+    <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent mb-3">
+      AI-Powered
+    </div>
+    <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-3">
+      Personalised to your goals
+    </div>
+    <Testimonials testimonials={aiTestimonials} />
+  </div>
 
-              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-md border border-gray-100">
-                <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent mb-2">
-                  5 Minutes
-                </div>
-                <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-3">Get your complete plan fast</div>
-                <TestimonialRotator testimonials={quickTestimonials} />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* Card 3 — 5 Minutes */}
+  <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-4 sm:p-6 shadow-md">
+    <div className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent mb-3">
+      5 Minutes
+    </div>
+    <div className="text-xs sm:text-sm md:text-base text-gray-600 mb-3">
+      So quick and easy to get started
+    </div>
+    <Testimonials testimonials={quickTestimonials} />
+  </div>
+</section>
+
 
       {/* Problem/Solution Section */}
       <ProblemSolutionSection />
