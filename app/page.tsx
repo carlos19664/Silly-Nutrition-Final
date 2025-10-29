@@ -13,31 +13,29 @@ import Testimonials from "@/components/testimonials";
 
 
 export default function LandingPage() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const betaTestimonials = [
-  { description: "Excited to be part of the beta!", name: "Early User" },
-  { description: "Love being one of the first to try this", name: "Beta Tester" },
-  { description: "The beta experience has been incredible", name: "John D." },
-]; 
-
+    { description: "Excited to be part of the beta!", name: "Early User" },
+    { description: "Love being one of the first to try this", name: "Beta Tester" },
+    { description: "The beta experience has been incredible", name: "John D." },
+  ];
 
   const aiTestimonials = [
-  { description: "The AI recommendations are spot on", name: "Sarah K." },
-  { description: "Feels like it was made just for me", name: "Mike R." },
-  { description: "Best personalised plan I’ve ever used", name: "Emma L." },
-]; 
-
+    { description: "The AI recommendations are spot on", name: "Sarah K." },
+    { description: "Feels like it was made just for me", name: "Mike R." },
+    { description: "Best personalised plan I’ve ever used", name: "Emma L." },
+  ]; 
 
   const quickTestimonials = [
-  { description: "Fastest setup I’ve ever done", name: "Mike R." },
-  { description: "Got my plan in under 5 minutes!", name: "Jessica T." },
-  { description: "So quick and easy to get started", name: "David L." },
-]; // same here: ends with ];
+    { description: "Fastest setup I’ve ever done", name: "Mike R." },
+    { description: "Got my plan in under 5 minutes!", name: "Jessica T." },
+    { description: "So quick and easy to get started", name: "David L." },
+  ];
 
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+   <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <ExitIntentPopup />
 
       {/* Navigation */}
