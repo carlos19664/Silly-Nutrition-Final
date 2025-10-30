@@ -1,9 +1,10 @@
-export default function Testimonials() {
+export default function Testimonials({ testimonials }: { testimonials: { description: string; name?: string }[] }) {
   return (
-    <section>
-      <h2>What People Say</h2>
-      <p>Placeholder testimonials section</p>
-    </section>
+    <ul>
+      {testimonials?.map((t, i) => (
+        <li key={i}>{t.description}{t.name ? ` — ${t.name}` : ""}</li>
+      ))}
+    </ul>
   );
 }
 
