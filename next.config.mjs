@@ -1,14 +1,12 @@
+import path from "path";
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  eslint: {
-    ignoreDuringBuilds: true,
+  webpack: (config) => {
+    // Force @ to point at the repo root
+    config.resolve.alias["@"] = path.resolve(process.cwd());
+    return config;
   },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
-  images: {
-    unoptimized: true,
-  },
-}
+};
 
-export default nextConfig
+export default nextConfig;
