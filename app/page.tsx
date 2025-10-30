@@ -32,10 +32,9 @@ export default function LandingPage() {
     { description: "Got my plan in under 5 minutes!", name: "Jessica T." },
     { description: "So quick and easy to get started", name: "David L." },
   ];
-
-
+  
   return (
-   <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
+    <div className="min-h-screen bg-gradient-to-b from-orange-50 to-white">
       <ExitIntentPopup />
 
       {/* Navigation */}
@@ -56,7 +55,7 @@ export default function LandingPage() {
                   variant="outline"
                   className="border-2 border-orange-500 text-orange-600 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100 bg-transparent font-semibold transition-all"
                 >
-                  How It Works
+                  How It Works                                                                                                                                 
                 </Button>
               </a>
               <a href="#pricing">
