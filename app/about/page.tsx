@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { SiteLogo } from "@/components/site-logo"
-import { ArrowRight, Users, Target, Heart, Award } from "lucide-react"
+import Link from "next/link";
+import { Button } from "components/ui/button";
+import SiteLogo from "components/site-logo";
+import { ArrowRight, Users, Target, Heart, Award } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -16,6 +16,7 @@ export default function AboutPage() {
               <SiteLogo size="md" />
               <span className="text-xl font-bold">Silly Nutrition</span>
             </Link>
+
             <nav className="hidden md:flex items-center gap-2">
               <Link href="/#pricing">
                 <Button
