@@ -1,6 +1,6 @@
 "use client";
 
-// marker test 1
+// MARKER: about-page-test 2025-11-01
 import Link from "next/link";
 import { Button } from "components/ui/button";
 import SiteLogo from "components/site-logo";
@@ -255,3 +255,4 @@ export default function AboutPage() {
     </div>
   )
 }
+// END MARKER: about-page-test 2025-11-01
