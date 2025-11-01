@@ -1,14 +1,15 @@
-"use client"
+"use client";
 
 import { useState } from "react";
 import { Button } from "../../../components/ui/button";
 import { Label } from "../../../components/ui/label";
 import { RadioGroup, RadioGroupItem } from "../../../components/ui/radio-group";
 import { Textarea } from "../../../components/ui/textarea";
-import SiteLogo from "../../../components/site-logo";
 import { AlertTriangle, Gift } from "lucide-react";
 import Link from "next/link";
-import SiteLogo from "components/site-logo";
+import SiteLogo from "../../../components/site-logo";
+
+
 
 
 export default function CancelAccountPage() {
