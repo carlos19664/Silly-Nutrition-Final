@@ -2,8 +2,8 @@
 
 // MARKER: about-page-test 2025-11-01
 import Link from "next/link";
-import { Button } from "components/ui/button";
-import SiteLogo from "components/site-logo";
+import { Button } from "../../components/ui/button";
+import SiteLogo from "../../components/site-logo";
 import { ArrowRight, Users, Target, Heart, Award } from "lucide-react";
 
 export default function AboutPage() {
